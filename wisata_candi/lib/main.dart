@@ -24,15 +24,18 @@ class MainApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple).copyWith(
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Colors.deepPurple).copyWith(
           primary: Colors.deepPurple,
           surface: Colors.deepPurple[50],
         ),
         useMaterial3: true,
       ),
-      // home: DetailScreen(candi: candiList[0],),
+      home: DetailScreen(
+        candi: candiList[0],
+      ),
       // home: ProfileScreen(),
-      home: SignInScreen(),
+      // home: SignInScreen(),
     );
   }
 }

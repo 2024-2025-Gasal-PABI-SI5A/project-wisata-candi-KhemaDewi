@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatefulWidget{
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
-
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
   // TODO: 1. Deklarasikan variabel yang dibutuhkan
   bool isSignedIn = false;
-  String fullName = 'Cristiano Rico Carvalho';
-  String userName = 'Cristiano';
+  String fullName = 'Khema Dewi';
+  String userName = 'Jeno';
   int favoriteCandiCount = 0;
 
   // TODO: 5. Implementasi funsgi SignIn
@@ -28,6 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       isSignedIn = !isSignedIn;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,25 +52,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.deepPurple,
-                              width: 2,
-                            ),
-                            shape: BoxShape.circle
-                          ),
+                              border: Border.all(
+                                color: Colors.deepPurple,
+                                width: 2,
+                              ),
+                              shape: BoxShape.circle),
                           child: const CircleAvatar(
                             radius: 50,
-                            backgroundImage: 
-                              AssetImage('images/placeholder_image.png'),
+                            backgroundImage:
+                                AssetImage('images/placeholder_image.png'),
                           ),
                         ),
                         if (isSignedIn)
                           IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.camera_alt,
-                              color: Colors.deepPurple[50],
-                            )),
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.camera_alt,
+                                color: Colors.deepPurple[50],
+                              )),
                       ],
                     ),
                   ),
@@ -201,10 +200,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                isSignedIn 
-                  ? TextButton(
-                    onPressed: signOut, child: const Text('Sign Out'))
-                  : TextButton(onPressed: signIn, child: const Text('Sign In'))
+                isSignedIn
+                    ? TextButton(
+                        onPressed: signOut, child: const Text('Sign Out'))
+                    : TextButton(
+                        onPressed: signIn, child: const Text('Sign In'))
               ],
             ),
           ),
@@ -212,5 +212,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-
 }
